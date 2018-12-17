@@ -80,12 +80,26 @@
           </div>
             <div class="container-fluid row">
 
-              <div class="col-md-6">
+              <div class="col-md-12">
                      <div id="cajabotones">
                        <button type="button" id="guarda"  class="btn btn-secondary">Guardar!</button>
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tema
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('monokai');">Monokai</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('ambiance');">Ambiance</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('chrome');">Chrome</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('dawn');">Dawn</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('github');">Github</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('iplastic');">iPlastic</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('terminal');">Terminal</a>
+                          <a class="dropdown-item" href="#" onclick="seleccionarTema('solarized_dark');">Solarized Dark</a>
+
+                        </div>
                      </div>      
-                    <div id="fondo" class="col-12"> 
-                        <div id="texto" width="1000" height="5000">nnnnnn</div>
+                    <div id="fondo" class="editor-fondo col-12"> 
+                        <div id="texto" width="1000" height="5000"></div>
                         
                     </div>
                 </div>
@@ -95,7 +109,7 @@
                 <div class="col-md-6">
                     <div class="container app">
                         <div class="row app-one">
-                          hlajsfns
+                          
                        </div>
                      </div>
                 </div>

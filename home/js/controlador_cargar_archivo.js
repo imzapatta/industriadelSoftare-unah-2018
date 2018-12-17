@@ -133,9 +133,9 @@ function cargarachivo(codigousuario)
             for(var i=0; i<respuesta.length;i++){
                 console.log(respuesta);                        
                 $("#cargararchivos").append(
-                    `<div class='row'>
-                    <div class=col-xl-3 col-lg-3 col-md-3 col-sm-6 col-3 onclick="archivo(${respuesta[i].Codigo_Archivo});" >
-                            <img src='img/nuevo_archivo.png' height='200'  >
+                    `
+                    <div class="col-xs-3 col-lg-2 col-md-2 col-sm-3 icono-archivo" onclick="archivo(${respuesta[i].Codigo_Archivo});" >
+                            <img class="imagen-archivo" src='img/nuevo_archivo.png' height='100'  >
                             <p class="archivos-texto">${respuesta[i].Nombre}.${respuesta[i].Extension_Archivo} </p>
                     </div>`
 
@@ -154,7 +154,7 @@ function crear_archivo(){
         $.ajax({
          url:"/insertararchivos",
          method:"POST",
-         data:"codigo_archivo=" + $("#numerocampos").val() + "&" + "nombre_archivo="+$("#caja").val() + "&" + "usuario="+$("#codigousuario").val(),
+         data:"codigo_archivo=" + $("#numerocampos").val() + "&" + "nombre_archivo="+$("#caja").val() + "&" + "usuario="+$("#codigousuario").val() + "&" + "formato_archivo="+$("#formato_archivo").val() + "&" + "lenguaje_archivo="+$("#lenguaje_archivo").val(),
          dataType:"json",
          success:function(respuesta){
              if (respuesta.affectedRows==1){

@@ -21,6 +21,11 @@
 	});
 });
 
+function seleccionarTema(tema){
+    editor.setTheme("ace/theme/"+tema);
+}
+var editor = ace.edit("texto");
+
 $(document).ready(function(){
 
     $.ajax({
@@ -29,10 +34,10 @@ $(document).ready(function(){
         success: function(respuesta){
             console.log(respuesta);
             console.log(respuesta[0].Contenido_Archivo);
-            var editor = ace.edit("texto");
-            var modo= "ace/mode/" + respuesta[0].extension_archivo;
+            
+            var modo= "ace/mode/" + respuesta[0].Lenguaje_Archivo;
             console.log(modo);
-            editor.setTheme("ace/theme/monkai");
+            editor.setTheme("ace/theme/monokai");
             editor.session.setMode(modo);
             editor.setValue(respuesta[0].Contenido_Archivo);
         }

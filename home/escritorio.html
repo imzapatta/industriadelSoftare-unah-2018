@@ -91,7 +91,7 @@
             </div>
             
            <div class="container">
-        <div id="cargararchivos">
+        <div class="row" id="cargararchivos">
             <!--<div class="row"> -->
             <!-- <div id="fondo" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> <a href="nuevo_archivo.html"><img src="img/nuevo_archivo.png" height="250"></a></div> -->
 
@@ -113,12 +113,34 @@
                     </div>
                     <div class="modal-body">
                       <h3>Creacion De Archivo</h3>
+                      <div class="col-sm-5 col-xs-5" style="padding:0;">
+                        <label>Nombre de Archivo: </label>
+                        <input id="caja" class="form-control" type="text" name="nombre_archivo" placeholder="Ingresa el nombre">   
+                        <label>Formato de Archivo: </label>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Formato de Archivo
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('HTML');">HTML</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('CSS');">CSS</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('JavaScript');">JavaScript</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('PHP');">PHP</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('XML');">XML</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('CSHARP');">C#</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('Java');">Java</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('Python');">Python</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('SQL');">SQL</a>
+                            <a class="dropdown-item" href="#" onclick="seleccionarFormato('Plain_text');">Texto Plano</a>
+                          </div>
+                        </div>
+                        <input id="formato_archivo" class="form-control hidden" type="text" name="formato_archivo" placeholder="html | js | css | etc">
+                        <br>
+                        <input id="lenguaje_archivo" class="form-control" disabled="disabled" type="text" name="lenguaje_archivo" >         
+                    </div> 
                     </div>
                     <div class="modal-footer">
-                        <div class="col-sm-5 col-xs-5" style="padding:0;">
-                            <label>Nombre de Archivo: </label>
-                            <input id="caja" class="form-control" type="text" name="nombre_archivo" placeholder="ingresa el nombre">        
-                          </div>                       
+                                              
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                       <button type="button" id="meterarchivo" class="btn btn-success">Crear Archivo</button>
                     </div>
@@ -198,6 +220,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/controlador_cargar_archivo.js"></script>
+    <script src="js/controlador_home.js"></script>
     
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>

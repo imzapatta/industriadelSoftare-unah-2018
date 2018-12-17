@@ -69,9 +69,9 @@ function cargarcarpetas(codigousuario)
             for(var i=0; i<respuesta.length;i++){
                 console.log(respuesta);                        
                 $("#cargar").append(
-                    `<div class='row'>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12" onclick="archivo(${respuesta[i].Codigo_carpeta});" >
-                            <img src='img/nuevo_archivo.png' height='200'  >
+                    `
+                    <div class="col-xs-3 col-lg-2 col-md-2 col-sm-3 icono-archivo" onclick="archivo(${respuesta[i].Codigo_carpeta});" >
+                    <img class="imagen-archivo" src='img/folder.png' height='100'  >
                             <p class="archivos-texto">${respuesta[i].Nombre}</p>
                     </div>`
 

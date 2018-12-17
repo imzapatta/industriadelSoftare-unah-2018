@@ -19,3 +19,26 @@
 #modal-footer{
     margin-right: 30%;
 }
+
+.icono-archivo{
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.imagen-archivo{
+    margin: 0 20%;
+}
+
+.archivos-texto{
+    text-align: center;
+    margin-top: 5px;
+}
+.editor-fondo{
+    padding: 0;
+}
+
+.hidden{
+    display: none;
+}

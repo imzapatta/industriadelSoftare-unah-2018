@@ -13,10 +13,10 @@ function cargarpapelera(codigousuario)
             console.log("llegando a cargar favritos");
             for(var i=0; i<respuesta.length;i++){                       
                 $("#cargarpapeleraa").append(
-                    `<div class='row'>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12" onclick="archivo(${respuesta[i].Codigo_Archivo});" >
-                            <img src='img/nuevo_archivo.png' height='200'  >
-                            <p class="archivos-texto">${respuesta[i].Nombre}.${respuesta[i].Extension_Archivo}</p>
+                    `
+                    <div class="col-xs-3 col-lg-2 col-md-2 col-sm-3 icono-archivo" onclick="archivo(${respuesta[i].Codigo_Archivo});" >
+                        <img class="imagen-archivo" src='img/nuevo_archivo.png' height='100'  >
+                        <p class="archivos-texto">${respuesta[i].Nombre}.${respuesta[i].Extension_Archivo}</p>
                     </div>`
 
                 );               

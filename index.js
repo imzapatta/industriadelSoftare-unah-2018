@@ -11,11 +11,11 @@
 
 //////////////////////////////variable para base de datos////////////////////////////
             var credenciales = {
-                user:"root",
-                password:"",
+                user:"admin_root",
+                password:"rootstrong",
                 port:"3306",
                 host:"localhost",
-                database:"gedit"
+                database:"admin_gedit"
             };
 
             //Exponer una carpeta como publica, unicamente para archivos estaticos: .html, imagenes, .css, .js
@@ -54,7 +54,6 @@
                     request.body.apellido,
                     request.body.correo,
                     request.body.contraseña,
-                    request.body.correo,
                     request.body.nacimiento
                     ],
                     function(err, result){
@@ -225,18 +224,18 @@
              /////////////////////////////////////////insertar archivos/////////////////////////////////////////////////////////
              app.post("/insertararchivos", function(request, response){
                 var conexion = mysql.createConnection(credenciales);
-                var sql = 'INSERT INTO `tbl_archivos`( Codigo_Archivo , Nombre, Extension_Archivo, Codigo_usuario, Fecha_creacion,Fecha_Ultima_edicion,Contenido_Archivo) VALUES (?,?,?,?,?,?,?)';
-                var extension="html";
+                var sql = 'INSERT INTO `tbl_archivos`( Codigo_Archivo , Nombre, Extension_Archivo, Codigo_usuario, Fecha_creacion,Fecha_Ultima_edicion,Contenido_Archivo, Lenguaje_Archivo) VALUES (?,?,?,?,?,?,?,?)';
                 conexion.query(
                     sql,
                     [
                     request.body.codigo_archivo,
                     request.body.nombre_archivo,
-                    extension,
+                    request.body.formato_archivo,
                     request.body.usuario,
                     "13/12/18",
                     "13/12/18",
-                    " "
+                    " ",
+                    request.body.lenguaje_archivo
                     ],
                     function(err, result){
                         if (err) throw err;
