@@ -195,7 +195,12 @@ function contandoarchivo(){
     dataType:"json",
     success:function(respuesta){
     console.log(respuesta);
-    $("#numerocampos").val(respuesta.length) 
+    if(respuesta == ''){
+        $("#numerocampos").val(1);    
+    }else{
+        $("#numerocampos").val(respuesta.length)
+    }
+     
     console.log("numero de campos" + $("#numerocampos").val());       
     }
 });

@@ -11,8 +11,8 @@
 
 //////////////////////////////variable para base de datos////////////////////////////
             var credenciales = {
-                user:"admin_root",
-                password:"rootstrong",
+                user:"",
+                password:"",
                 port:"3306",
                 host:"localhost",
                 database:"admin_gedit"
@@ -60,6 +60,7 @@
  
                         if (err) throw err;
                         response.send(result);
+                        conexion.end();
                     }    
                 );
             });
@@ -75,6 +76,7 @@
                     usuarios.push(resultado);
                 })
                 .on("end",function(){
+                    conexion.end();
                     response.send(usuarios);
                 });
             });
@@ -90,6 +92,7 @@
                     plan.push(resultado);
                 })
                 .on("end",function(){
+                    conexion.end();
                     response.send(plan);
                 });
             });
@@ -239,6 +242,7 @@
                     ],
                     function(err, result){
                         if (err) throw err;
+                        
                         response.send(result);
                     }
                 ); 
@@ -257,6 +261,7 @@
                     ],
                     function(err, result){
                         if (err) throw err;
+                        
                         response.send(result);
                     }
                 ); 
@@ -272,6 +277,7 @@
                             
                             console.log(data)
                             response.send(data); 
+
                         }
                  }
                 ); 
@@ -285,7 +291,8 @@
                 function(err, data, fields){
                     if (data.length>0){
                         
-                        console.log(data)
+                        //console.log(data)
+                        
                         response.send(data); 
                     }
                 }
@@ -304,6 +311,7 @@
                         function(err, result){
                             if (err) throw err;
                             response.send(result);
+                            conexion.end();
                             console.log("datos: " + request.body.Contenido_Archivo );
                             console.log("codigo archivo: " + request.cookies.codigo );
                         }
@@ -320,6 +328,7 @@
                     ],
                     function(err, result){
                         if (err) throw err;
+                        
                         response.send(result);
                     }
                 ); 
@@ -334,6 +343,7 @@
                     [request.body.codigo_usuario],
                     function(err, result){
                         if (err) throw err;
+                        conexion.end();
                         response.send(result);
                         console.log(result);
                     }
@@ -351,6 +361,7 @@
                         ],
                         function(err, result){
                             if (err) throw err;
+                            conexion.end();
                             response.send(result);
                             console.log(result);
                         }
@@ -367,6 +378,7 @@
                        ],
                        function(err, result){
                            if (err) throw err;
+                           conexion.end();
                            response.send(result);
                            console.log(result);
                        }
@@ -399,7 +411,8 @@
                                 peticion.session.contraseña = data[0].contraseña;
                                 peticion.session.codigo_usuario=data[0].codigo_usuario;
                                 data[0].estatus = 0;
-                                respuesta.send(data[0]); 
+                                respuesta.send(data[0]);
+                                
                             }else{
                                 respuesta.send({estatus:1, mensaje: "Login fallido"}); 
                             }	
