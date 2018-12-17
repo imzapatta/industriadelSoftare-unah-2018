@@ -1,0 +1,44 @@
+.container-fluider{
+	background: #563D7C;
+}
+
+#opciones{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+    color:white;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#opciones:hover{
+	background: blue;
+}
+
+ .btn.btn-primary{
+	background: #ccc;
+	color: black;
+	position: center;
+	border: none;
+	width: 100px;
+	position: relative;
+	left:70px;
+
+}
+
+ .btn.btn-primary:hover{
+	background: red;
+	color: black;
+	position: center;
+
+}
+.navbar.navbar-inverse{
+	background: black;
+}
+
+#buscar{
+	box-sizing: border-box;
+	color: red;
+}
+form .btn.btn-primary{
+	background: black;
+}

@@ -1,0 +1,92 @@
+#fondo{
+	background:url(../img/fondo1.jpg);
+}
+
+#titulo{
+	font-size: 2.9em;
+
+}
+
+#formulario{
+	background: #B30030;
+	margin:200px 500px;
+	padding: 10px;
+}
+
+#formulario label{
+	color: white;
+	padding-bottom:1px;
+}
+
+ 
+
+#linea{
+	padding top: -20px; 
+	background: #212529;
+	size: 3px;
+}
+
+#boton{
+    background-color:  #B30030;
+    border: 0px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#boton:hover{
+    background-color: #F1373A;
+}
+
+#boton1{
+    background-color:  #343A40;
+    border: 0px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top:20px;
+    margin-left: 110px;
+   margin-bottom: 10px; 
+
+}
+
+#boton1:hover{
+    background-color: #999999;
+}
+
+#boton2{
+    background-color:  #343A40;
+    border: 0px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top:20px;
+    margin-left: 110px;
+   margin-bottom: 10px; 
+   
+}
+
+#boton2:hover{
+    background-color: #999999;
+}
+
+
+#caja{
+    margin-bottom: 4px;
+    position: relative;
+	left: 0px;
+}
+
+#caja1{
+    margin-bottom: 4px;
+    position: relative;
+	left: 0px;
+}
+
+#caja2{
+    margin-bottom: 4px;
+    position: relative;
+	left: 0px;
+}
+
+
+#rotulo{
+padding-left: 50px;
+}

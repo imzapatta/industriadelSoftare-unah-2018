@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/GEDIT5.jpg">
+
+    <title>GEDIT-Mi Escritorio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body style="background:url(../img/fondo1.jpg);">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" style="background:#343A40" ><img src="img/GEDIT5.jpg" width="25" height="25">  Gedit</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search"  aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <input id="boton" class="btn btn-secondary" type="button" name="Buscar" value="Buscar">
+          <a id="boton" class="btn btn-secondary" href="/logout" role="button">Cerrar Sesion </a>
+          <input id="codigousuario1" value="" type="hidden">
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid" >
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar" >
+          <div class="sidebar-sticky" style="background:#343A40">
+            <ul class="nav flex-column" >
+              <li class="nav-item">
+                <a id="titulo" class="nav-link" href="escritorio.html">
+                    <span data-feather="home"></span>
+                  Mi Escritorio
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a id="titulo" class="nav-link" href="favorito.html">
+                  <span data-feather="bar-chart-2"></span>
+                  favoritos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="titulo" class="nav-link" href="carpetas.html">
+                    <span data-feather="layers"></span>
+                  Carpetas
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="titulo" class="nav-link" href="papelera.html">
+                  <span data-feather="layers"></span>
+                  Papelera
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a id="titulo" class="nav-link active" href="configurar_perfil.html" >
+                    <span data-feather="users"></span>
+                  Configurar Perfil <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" >
+          <div  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1  id="titulo" class="h2">configuraciones</h1>
+            <div class="btn-toolbar mb-2 mb-md-0" >                
+              </div > 
+            </div>
+            
+           <div class="container-fluid">
+        
+            <button class="btn btn-secondary" id="elegirplan" type="button" onclick="modalPlanes();" >
+                Elegir Plan
+            </button>
+            <button class="btn btn-secondary" id="Factura" type="button" onclick="modalfactura();" >
+                Factura
+            </button>
+            <button class="btn btn-success" id="eliminarcuenta" type="button" onclick="modaleliminar();">
+                Eliminar Cuenta
+            </button>
+        
+            
+              <!--modal para agregar planes-->
+
+            <div class="modal fade" id="AgregarPlan" tabindex="-1" role="dialog" aria-labelledby="modalPlanLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalPlanLabel"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h3>seleccion de Plan</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-5 col-xs-5" style="padding:0;">
+                            <select id="listaplanes" class="form-control"></select>
+                        </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" id="agregar" class="btn btn-success">Elegir Plan</button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+              <!--modal para facturas-->
+
+              <div class="modal fade" id="AgregarPlan" tabindex="-1" role="dialog" aria-labelledby="modalPlanLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalPlanLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h3>seleccion de Plan</h3>
+                      </div>
+                      <div class="modal-footer">
+                          <div class="col-sm-5 col-xs-5" style="padding:0;">
+                              <select id="listaplanes" class="form-control"></select>
+                          </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="agregar" class="btn btn-success">Elegir Plan</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+              <!--modal para cerrar sesion-->
+                <div class="modal fade" id="modaleiminar" tabindex="-1" role="dialog" aria-labelledby="modaleiminarLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="modaleiminarLabel">Eliminar Cuenta</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <h3>¿Desea eliminar su Cuenta?</h3>
+                              <br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                              <button type="button" id="eliminacuenta" class="btn btn-secondary"  >Eliminar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                    </div>  
+    </div>
+            
+          
+
+
+          <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+         <footer class="container">
+        <p class="float-right"><a href="#">Regresa al inicio</a></p>
+        <p>&copy; 2017-2018 GEDIT Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador_configurar_perfil.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    
+  </body>
+</html>

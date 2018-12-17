@@ -1,0 +1,21 @@
+#texto{
+    height: 926px;
+    min-width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    font-size: 1.1em;
+
+}
+
+#cajabotones{
+    margin-left: 40%; 
+}
+#reja{
+    margin-left: 50%; 
+}
+
+
+
+#modal-footer{
+    margin-right: 30%;
+}

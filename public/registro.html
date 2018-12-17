@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/img/icono.png">
+	<title>GEDIT-Registro</title>
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="img/GEDIT5.jpg">
+</head>
+<body id="fondo">
+
+  <HEADER>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+      <a class="navbar-brand" href="pagina_comercial.html"><img src="img/GEDIT5.jpg" width="25" height="25">GEDIT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form id="formulario-login" class="form-inline my-2 my-lg-0 ml-auto">
+          <a id="boton" class="btn btn-secondary" href="index.html" role="button"> Iniciar Sesion </a>
+        </form>
+      </div>
+    </nav>
+  </HEADER>
+
+  <div id="formulario" >
+    <form >
+      <center id="titulo">Registro</center>
+      <hr id="linea" />
+      <div class="row" >
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <label>Nombre:</label>
+                  <input class="form-control" type="text" placeholder="Nombre" id="txt-nombre" >
+                  <div class="valid-feedback">Es bien</div>
+                  <div class="invalid-feedback">Esta mal</div>
+                  <!--div id="validacion">-</div--><!-- Descomentar en caso de probar la funcionalidad sin bootstrap -->
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <label>Apellido:</label>
+                <input class="form-control" type="text" placeholder="Apellido" id="txt-lastname">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+              <label>Correo Electronico:</label> 
+                <input class="form-control" type="text" placeholder="ejemplo: ejemplo@xxxx.com" id="txt-email">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+                <label>Contraseña:</label>
+                <input class="form-control" type="password" placeholder="Password" id="txt-password">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+                <label>Fecha De Nacimiento:</label>
+                <input class="form-control" type="date" placeholder="Fecha de Nacimiento" id= "txt-birthday">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+                <label>Genero:</label>
+                <label><input type="radio" name="rbt-genero" value="1"> Mujer</label>
+                <label><input type="radio" name="rbt-genero" value="2"> Hombre</label>
+                <br>
+                <a id="boton2" class="btn btn-secondary"  role="button"> Registrar </a>
+              </div>
+              
+            </div>
+        </div>
+    </form>
+  </div>
+
+ <footer class="container">
+        <p class="float-right"><a href="#" ">Regresa al inicio</a></p>
+        <p style="color:#B30030;" >&copy; 2017-2018 GEDIT Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+</body>
+</html>
